@@ -3,7 +3,7 @@
  */
 
 body {
-	font-family: "Proxima Nova";
+	font-family: Helvetica, sans-serif;
 	font-weight: 100;
 }
 
@@ -64,4 +64,4 @@ header {
 }
 
 @import 'home.css.scss';
-@import 'post.css.scss';
+@import 'posts.css.scss';
