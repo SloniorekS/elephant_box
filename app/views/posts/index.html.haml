@@ -1,17 +1,16 @@
 - if user_signed_in?
   %p#intro
-    Hello
-    =current_user.name
-    !
+    Cześć
+    =current_user.name + ", łapa!"
     %br/
     %span
-      Share your dog's best moments and see what others' dogs are up to.
+      Podziel się z innymi waszymi przygodami i zajrzyj do znajomych psi-jaciół.
 - else
   %p#intro
-    How is your dog doing?
+    Co słychać u twojego psa?
     %br/
     %span
-      Share your dog's best moments and see what others' dogs are up to.
+      Podziel się z innymi waszymi przygodami i zajrzyj do znajomych psi-jaciół.
 
 #posts
   - @posts.each do |post|
@@ -23,7 +22,7 @@
           %h2= link_to post.title, post
         .data.clearfix
           %p.username
-            Shared by
+            Dodano przez
             = post.user.name
           %p.buttons
             %span

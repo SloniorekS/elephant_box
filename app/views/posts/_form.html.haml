@@ -1,7 +1,9 @@
 = simple_form_for @post do |f|
-  = f.input :image
-  = f.input :title
-  = f.input :link
-  = f.input :description
-
-  = f.button :submit
+  .form-group.row
+    = f.input :image, label: "Zdjęcie: "
+  .form-group.row
+    = f.input :title, label: "Tytuł: "
+  .form-group.row
+    = f.input :description, label: "Opis: "
+  .form-group.row
+    = f.button :submit, "Dodaj"

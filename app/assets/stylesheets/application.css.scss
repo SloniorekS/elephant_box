@@ -1,6 +1,7 @@
 /*
  *= require_self
  */
+@import 'bootstrap';
 
 body {
 	font-family: Helvetica, sans-serif;
@@ -62,6 +63,7 @@ header {
 		}
 	}
 }
+
 
 @import 'home.css.scss';
 @import 'posts.css.scss';

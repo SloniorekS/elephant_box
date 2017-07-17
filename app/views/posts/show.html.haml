@@ -18,10 +18,10 @@
         %i.fa.fa-comments-o
         =pluralize(@post.comments.count, "comment")
       - if @post.user == current_user
-        = link_to "Edit", edit_post_path(@post), class: "data"
-        = link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: "data"
+        = link_to "Edytuj", edit_post_path(@post), class: "data"
+        = link_to "Usuń", post_path(@post), method: :delete, data: { confirm: "Jesteś pewien?" }, class: "data"
     #random_post
-      %h3 Random Dog
+      %h3 Losowy Psi-jaciel
       .post
         .post_image
           = link_to (image_tag @random_post.image.url(:medium)), post_path(@random_post)
@@ -30,7 +30,7 @@
             %h2= link_to @random_post.title, post_path(@random_post)
           .data.clearfix
             %p.username
-              Shared by
+              Dodano przez
               = @random_post.user.name
             %p.buttons
               %span
@@ -39,9 +39,10 @@
               %span
                 %i.fa.fa-thumbs-o-up
                 = @random_post.get_likes.size
+%hr
 
 #comments
-  %h2.comment.count= pluralize(@post.comments.count, "Comment")
+  %h3 Komentarze:
   - @comments.each do |comment|
     .comment
       %p.username= comment.user.name
