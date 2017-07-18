@@ -6,7 +6,7 @@
   <div class="form-inputs">
     <%= f.input :name, required: true, autofocus: true, label: "Imię: " %>
     <%= f.input :email, required: true, label: "E-mail: "  %>
-    <%= f.input :password, required: true, label: "Hasło: " hint: ("minimum #{@minimum_password_length} znaków" if @minimum_password_length) %>
+    <%= f.input :password, required: true, label: "Hasło: ", hint: ("minimum #{@minimum_password_length} znaków" if @minimum_password_length) %>
     <%= f.input :password_confirmation, label: "Potwierdź hasło", required: true %>
   </div>
 
